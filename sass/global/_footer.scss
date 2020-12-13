@@ -1,0 +1,23 @@
+.p-global-footer {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 8vw;
+
+  @media screen and (max-width: $media-sp) {
+    flex-flow: column;
+		height: auto;
+  }
+}
+
+.p-copy {
+  font-size: $font-size-small;
+  text-align: center;
+	width: 100%;
+	font-weight: 600;
+
+  @media screen and (max-width: $media-sp) {
+    font-size: $font-size-small;
+  }
+}

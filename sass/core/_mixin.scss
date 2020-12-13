@@ -1,0 +1,78 @@
+// @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap");
+
+@mixin home-section-ttl() {
+  font-family: "Source Sans Pro", "Noto Sans JP", sans-serif;
+  font-size: 4.8rem;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+
+  @media screen and (max-width: $media-sp) {
+    font-size: 3.4rem;
+  }
+}
+@mixin home-section-ttl-sub() {
+  display: block;
+  letter-spacing: 0.15em;
+  font-weight: bold;
+}
+
+/*------------------------------------------------------------------------
+	変数
+------------------------------------------------------------------------*/
+//media query
+$media-pc: 901px;
+$media-sp: 900px;
+
+//フォント設定
+$font-en: "Source Sans Pro", "Noto Sans JP", sans-serif;
+$font-size-x-large: 7.5rem;
+$font-size-x-large-sp: 15vw;
+$font-size-large: 6.4rem;
+$font-size-large-sp: 3.3rem;
+$font-size-medium: 5rem;
+$font-size-medium-sp: 11vw;
+$font-size-small: 1.4rem;
+$font-size-small-sp: 1.2rem;
+
+// カラー設定
+$color-main: #fff;
+$color-main-rgba: rgba(255, 255, 255, 0.98);
+$color-sub: #000;
+$color-sub-rgba: rgba(0, 0, 0, 0.98);
+$color-thd: #777;
+$color-overlay: rgba(0, 0, 0, 0.5);
+
+//ボーダー設定
+$border-list: 1px solid #ccc;
+
+//幅
+$h-header: 100px;
+$h-header-sp: 60px;
+$max-width-content: 1400px;
+
+//余白
+$space-vertical: 10vw; //vertical space
+$space-horizontal: 8vw; //horizontal space
+$space-horizontal-sp: 8vw;
+$space-horizontal-portfolio: 16%; //portfolio vertical space
+$space-horizontal-portfolio-sp: 14%; //portfolio vertical space
+$space-box: 60px;
+$space-txt-top: 30px;
+$space-txt-top-sp: 15px;
+$space-contents: 8vw;
+$space-contents-sp: 12vw;
+$padding-horizontal-section: 100px;
+$padding-horizontal-section-sp: 8vw;
+
+//スケール
+$scale-bigger-rich: 1.2;
+$scale-bigger: 1.05;
+$scale-smaller: 0.95;
+
+$transition: 0.3s;
+$transition: 0.3s;
+$transition-arrow: 0.4s;

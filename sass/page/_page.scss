@@ -1,0 +1,275 @@
+.p-subpage {
+  &-header {
+    position: relative;
+
+    // &::before {
+    //   content: "";
+    //   width: 100%;
+    //   height: 80%;
+    //   background: $color-main;
+    //   position: absolute;
+    //   left: 0;
+    //   z-index: -1;
+    // }
+    &-ttl {
+      display: flex;
+      flex-flow: column;
+      padding: 80px 0 100px;
+      text-align: center;
+      z-index: 1;
+      font-weight: 900;
+
+      @media screen and (max-width: $media-sp) {
+        padding: 40px 0;
+      }
+
+      &-en {
+        font-family: $font-en;
+        font-size: $font-size-x-large;
+        line-height: 1.5;
+        letter-spacing: 0.07em;
+
+        @media screen and (max-width: $media-sp) {
+          font-size: $font-size-x-large-sp;
+        }
+      }
+    }
+    &-bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: calc(100% - 38.16%);
+      background: no-repeat center;
+      background-size: cover;
+      z-index: -1;
+
+      @media screen and (max-width: $media-sp) {
+        width: calc(100% - 50px);
+      }
+    }
+  }
+}
+
+/*------------------------------------------------------------------------
+	作品詳細ページ
+------------------------------------------------------------------------*/
+.p-portfolio-single {
+  &-pagetop {
+    position: relative;
+  }
+  &-bg {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background: no-repeat center;
+    background-size: cover;
+  }
+
+  &-overlay {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: $color-overlay;
+    backdrop-filter: blur(50px) brightness(0.4);
+
+    @media screen and (max-width: $media-sp) {
+      align-items: flex-start;
+    }
+  }
+  &-head-figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    padding: $space-horizontal;
+    @media screen and (max-width: $media-sp) {
+      padding: 0 $space-horizontal $space-horizontal;
+      margin-top: 70px;
+    }
+  }
+  &-head-img {
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 0 10px #fff;
+    @media screen and (max-width: $media-sp) {
+      width: unset;
+      height: 51vh;
+    }
+  }
+  &-headline {
+    padding-top: 30px;
+    text-align: center;
+    max-width: 1000px;
+  }
+
+  &-ttl {
+    color: $color-main;
+
+    &-main {
+      font-size: $font-size-medium;
+      line-height: 1.2;
+      @media screen and (max-width: $media-sp) {
+        font-size: 10vw;
+      }
+    }
+    &-sub {
+      display: block;
+      font-weight: bold;
+      padding-top: 1rem;
+    }
+  }
+
+  .c-scroll {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    // @media screen and (max-width:$media-sp){
+    // 	left: 1.5vw;
+    // }
+    &-txt {
+      color: $color-main;
+    }
+    &-arrow {
+      background-color: rgba(50, 50, 50, 0.5);
+      // height: 60px;
+
+      &::before {
+        background-color: $color-main;
+        // height: 60px;
+        // top: -60px;
+        // animation-name: ani-arrow-sp;
+      }
+    }
+    &.is-changed {
+      pointer-events: none;
+    }
+  }
+
+  &-article {
+    max-width: $max-width-content;
+    padding: 100px 0 0;
+    margin: 0 auto;
+
+    @media screen and (max-width: $media-sp) {
+      padding: $space-contents-sp 0 0;
+    }
+  }
+  &-overview {
+    padding: 0 $space-horizontal;
+  }
+  &-desc {
+    max-width: 550px;
+    margin: 0 auto;
+    @media screen and (max-width: $media-sp) {
+      text-align: justify;
+		}
+		&-ttl{
+			font-size: 2rem;
+		}
+  }
+  &-role {
+    text-align: center;
+    padding-top: $space-txt-top;
+  }
+  &-content {
+    font-size: $font-size-medium;
+  }
+  &-screen {
+    padding: 100px $space-horizontal;
+
+    @media screen and (max-width: $media-sp) {
+      padding: $space-contents-sp 0;
+    }
+    &-list {
+      padding: $space-contents-sp $space-horizontal;
+      background-color: #eaeaea;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    &-item {
+      &:not(:first-child) {
+        margin-top: $space-horizontal;
+        @media screen and (max-width: $media-sp) {
+          margin-top: $space-vertical;
+        }
+      }
+
+      &-sp {
+        width: 28%;
+        margin-top: 8%;
+
+        @media screen and (max-width: $media-sp) {
+          width: 100%;
+          margin-top: 10%;
+          text-align: center;
+        }
+      }
+    }
+    &-img {
+      width: 100%;
+      height: auto;
+      box-shadow: 0 0 10px #aaa;
+    }
+  }
+
+  &-nav {
+    margin: 60px 0 40px;
+    background-color: #fff;
+
+    @media screen and (max-width: $media-sp) {
+      margin: 0 0 40px;
+    }
+    &-ttl {
+      font-family: $font-en;
+      font-size: $font-size-medium;
+      font-weight: bold;
+      letter-spacing: 0.02em;
+      text-align: center;
+
+      @media screen and (max-width: $media-sp) {
+        font-size: $font-size-medium-sp;
+      }
+    }
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1400px;
+      padding: 20px 8vw;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    &-item {
+      width: 29%;
+      @media screen and (max-width: $media-sp) {
+        width: 100%;
+      }
+      &:not(:first-child) {
+        @media screen and (max-width: $media-sp) {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+.single-portfolio_post {
+  .p-gnav-link,
+  .p-header-logo-link {
+    color: $color-main;
+  }
+  .p-gnav-link.is-changed,
+  .p-header-logo-link.is-changed {
+    color: $color-sub;
+  }
+  .p-hum-line.is-changed {
+    background: $color-sub;
+  }
+}

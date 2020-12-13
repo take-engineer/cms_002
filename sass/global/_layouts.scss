@@ -1,0 +1,118 @@
+* {
+  background-color: $color-main;
+}
+
+body {
+  font: normal normal normal 1.6em/1.8 "Lato", "游ゴシック体",
+    YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic",
+    "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  letter-spacing: 0.02em;
+	overflow-x: hidden;
+	font-weight: 600;
+	background-color: #fff;
+
+  @media screen and (max-width: $media-sp) {
+    line-height: 1.8;
+  }
+}
+
+body.page:not(.home)::before {
+  display: block;
+  padding: 100px 0 0;
+  content: "";
+
+  @media screen and (max-width: 1024px) {
+    padding: 60px 0 0;
+  }
+}
+
+.l-header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+	left: 0;
+}
+// .home .l-header{
+// 	mix-blend-mode: difference;
+// }
+// .home .l-header{
+// 	mix-blend-mode: difference;
+// }
+// .home.is-fixed .l-header{
+// 	mix-blend-mode: normal;
+// }
+.l-header{
+	mix-blend-mode: difference;
+}
+.l-header{
+	mix-blend-mode: difference;
+}
+body.is-fixed .l-header{
+	mix-blend-mode: normal;
+}
+
+.l-content {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row-reverse;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.l-home {
+  position: relative;
+}
+
+.l-main {
+  position: relative;
+}
+
+.l-blog {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  width: 100%;
+
+  @media screen and (max-width: $media-sp) {
+    flex-wrap: wrap;
+    padding: 60px 20px;
+  }
+}
+.l-blog-single {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  width: 100%;
+
+  @media screen and (max-width: $media-sp) {
+    flex-wrap: wrap;
+    padding: 60px 20px;
+  }
+  &-main {
+    &-wrap {
+      width: 70%;
+
+      @media screen and (max-width: $media-sp) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.l-footer {
+  width: 100%;
+  background: $color-main;
+
+  @media screen and (max-width: $media-sp) {
+    padding: 0px 0 20px;
+
+    & > *:not(:last-child) {
+      padding: 20px 0;
+    }
+  }
+}

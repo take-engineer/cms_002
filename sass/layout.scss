@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+@import "./core/reset";
+@import "./core/mixin";
+
+@import "./component/utility";
+@import "./component/animation";
+
+@import "./global/layouts";
+
+@import "./global/header";
+@import "./global/footer";
+
+@import "./page/home";
+@import "./page/page";
